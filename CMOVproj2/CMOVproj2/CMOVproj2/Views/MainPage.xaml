@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CMOVproj2"
+             x:Class="CMOVproj2.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Picker Title="Select Company" ItemsSource="{Binding Companies}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedCompany}" />
+        
+
+
+        <Button Text="Get data" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"
+           Clicked="getDataFromAPi"/>
+    </StackLayout>
+
+</ContentPage>
