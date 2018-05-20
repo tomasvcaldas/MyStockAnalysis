@@ -13,7 +13,7 @@
 namespace CMOVproj2 {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("c:\\users\\tomas\\source\\repos\\CMOVproj2\\CMOVproj2\\CMOVproj2\\App.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\tomas\\Documents\\MyStockAnalysis\\CMOVproj2\\CMOVproj2\\CMOVproj2\\App.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

@@ -6923,11 +6923,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\users\\tomas\\source\\repos\\CMOVproj2\\CMOVproj2\\CMOVproj2.UWP\\CMOVproj2.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\tomas\\Documents\\MyStockAnalysis\\CMOVproj2\\CMOVproj2\\CMOVproj2.UWP\\CMOVproj2.UWP.csproj",
       "projectName": "CMOVproj2.UWP",
-      "projectPath": "c:\\users\\tomas\\source\\repos\\CMOVproj2\\CMOVproj2\\CMOVproj2.UWP\\CMOVproj2.UWP.csproj",
+      "projectPath": "C:\\Users\\tomas\\Documents\\MyStockAnalysis\\CMOVproj2\\CMOVproj2\\CMOVproj2.UWP\\CMOVproj2.UWP.csproj",
       "packagesPath": "C:\\Users\\tomas\\.nuget\\packages\\",
-      "outputPath": "c:\\users\\tomas\\source\\repos\\CMOVproj2\\CMOVproj2\\CMOVproj2.UWP\\obj\\",
+      "outputPath": "C:\\Users\\tomas\\Documents\\MyStockAnalysis\\CMOVproj2\\CMOVproj2\\CMOVproj2.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

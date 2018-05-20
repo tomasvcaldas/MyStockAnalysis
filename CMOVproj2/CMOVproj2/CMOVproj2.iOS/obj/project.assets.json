@@ -654,11 +654,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\users\\tomas\\source\\repos\\CMOVproj2\\CMOVproj2\\CMOVproj2.iOS\\CMOVproj2.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\tomas\\Documents\\MyStockAnalysis\\CMOVproj2\\CMOVproj2\\CMOVproj2.iOS\\CMOVproj2.iOS.csproj",
       "projectName": "CMOVproj2.iOS",
-      "projectPath": "c:\\users\\tomas\\source\\repos\\CMOVproj2\\CMOVproj2\\CMOVproj2.iOS\\CMOVproj2.iOS.csproj",
+      "projectPath": "C:\\Users\\tomas\\Documents\\MyStockAnalysis\\CMOVproj2\\CMOVproj2\\CMOVproj2.iOS\\CMOVproj2.iOS.csproj",
       "packagesPath": "C:\\Users\\tomas\\.nuget\\packages\\",
-      "outputPath": "c:\\users\\tomas\\source\\repos\\CMOVproj2\\CMOVproj2\\CMOVproj2.iOS\\obj\\",
+      "outputPath": "C:\\Users\\tomas\\Documents\\MyStockAnalysis\\CMOVproj2\\CMOVproj2\\CMOVproj2.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
