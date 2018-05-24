@@ -1,0 +1,1 @@
+c:\users\tomas\source\repos\CMOVproj2\CMOVproj2\CMOVproj2.UWP\CMOVproj2.UWP.csproj;x86

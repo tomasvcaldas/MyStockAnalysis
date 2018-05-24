@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           
+             xmlns:local="clr-namespace:CMOVproj2"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="CMOVproj2.MainPage">
+
+    <StackLayout>
+
+        
+       
+
+        <Picker Title="Select Company" ItemsSource="{Binding Companies}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedCompany}" />
+        <Picker Title="Select Quote Type" ItemsSource="{Binding QuoteTypes}" ItemDisplayBinding="{Binding Type}" SelectedItem="{Binding SelectedType}"/>
+        
+        <DatePicker MinimumDate="01/01/2016"
+                    MaximumDate="05/24/2018"
+                    Date="{Binding SelectedDate}"/>
+        
+        <Label Text="Selected Company Tick:"/>
+        <Label x:Name="selectedTick" Text="{Binding MyCompany}"/>
+
+        
+        <Button Text="Get data" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"
+           Command="{Binding GetDataFromApi}"
+               
+           />
+
+        
+    </StackLayout>
+
+</ContentPage>
