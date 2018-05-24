@@ -108,6 +108,13 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "CMOVproj2.Android.dll" comes first in this list. */
 		"CMOVproj2.Android.dll",
 		"FormsViewGroup.dll",
+		"Microcharts.dll",
+		"Microcharts.Droid.dll",
+		"Microcharts.Forms.dll",
+		"Newtonsoft.Json.dll",
+		"SkiaSharp.dll",
+		"SkiaSharp.Views.Android.dll",
+		"SkiaSharp.Views.Forms.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Runtime.dll",

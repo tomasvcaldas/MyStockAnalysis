@@ -16,14 +16,25 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ApiResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Company.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\QuoteType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\QuoteTypeData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ChartPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\CompanyData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ChartPage.xaml.cs">
+      <DependentUpon>ChartPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ChartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

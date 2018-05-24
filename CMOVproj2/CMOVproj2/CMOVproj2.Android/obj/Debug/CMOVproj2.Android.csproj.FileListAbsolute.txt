@@ -95,11 +95,12 @@ c:\users\tomas\source\repos\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\andr
 c:\users\tomas\source\repos\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\System.Json.pdb
 c:\users\tomas\source\repos\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\System.Json.pdb
 c:\users\tomas\source\repos\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.Json.pdb
+C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\CMOVproj2.Android.csproj.CoreCompileInputs.cache
+C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\CMOVproj2.Android.csprojAssemblyReference.cache
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\CMOVproj2.Android.dll
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\CMOVproj2.Android.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\com.companyname.CMOVproj2.apk
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\com.companyname.CMOVproj2-Signed.apk
-C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\CMOVproj2.Android.csproj.CoreCompileInputs.cache
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\CMOVproj2.Android.dll
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\CMOVproj2.Android.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\bin\com.companyname.CMOVproj2.apk
@@ -127,6 +128,7 @@ C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\b
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\System.Core.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\System.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\System.Json.pdb
+C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\System.ServiceModel.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\System.Xml.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\System.Xml.Linq.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\Xamarin.Forms.Core.pdb
@@ -142,11 +144,13 @@ C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\b
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\System.ServiceModel.Internals.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\System.Web.Services.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\Mono.Security.pdb
+C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\System.IdentityModel.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\Mono.Android.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\mscorlib.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\System.Core.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\System.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\System.Json.pdb
+C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\System.ServiceModel.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\System.Xml.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\System.Xml.Linq.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\Xamarin.Forms.Core.pdb
@@ -162,6 +166,7 @@ C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\o
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\System.ServiceModel.Internals.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\System.Web.Services.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\Mono.Security.pdb
+C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\System.IdentityModel.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\FormsViewGroup.dll.mdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\CMOVproj2.Android.dll.mdb
@@ -177,6 +182,7 @@ C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\o
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.ComponentModel.Composition.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.Core.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.Data.pdb
+C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.IdentityModel.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.IO.Compression.FileSystem.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.IO.Compression.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.Json.pdb
@@ -185,13 +191,13 @@ C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\o
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.Runtime.Serialization.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.ServiceModel.Internals.pdb
+C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.ServiceModel.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.Transactions.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.Web.Services.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.Xml.Linq.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\System.Xml.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.pdb
-C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\CMOVproj2.Android.csprojAssemblyReference.cache
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\bin\Debug\CMOVproj2.Android.dll
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\CMOVproj2.Android.dll.mdb
 C:\Users\tomas\Documents\MyStockAnalysis\CMOVproj2\CMOVproj2\CMOVproj2.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb

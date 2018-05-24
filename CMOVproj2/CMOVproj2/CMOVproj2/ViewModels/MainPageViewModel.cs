@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CMOVproj2;
+using CMOVproj2.Models;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
@@ -9,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
+
 namespace CMOVproj2.ViewModels
 {
     public class MainPageViewModel : INotifyPropertyChanged
@@ -18,9 +22,15 @@ namespace CMOVproj2.ViewModels
         private string myCompany;
         private Company selectedCompany;
         private DateTime selectedDate;
+        private QuoteType selectedType;
+        public bool canCreate = false;
+        private INavigation Navigation;
+
 
 
         public IList<Company> Companies { get { return Models.CompanyData.Companies; } }
+
+        public IList<QuoteType> QuoteTypes { get { return Models.QuoteTypeData.QuoteTypes; } }
 
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {
@@ -28,6 +38,20 @@ namespace CMOVproj2.ViewModels
         }
 
         public ICommand GetDataFromApi { get; private set; }
+
+
+        public QuoteType SelectedType
+        {
+            get { return selectedType; }
+            set
+            {
+                if (selectedType != value)
+                {
+                    selectedType = value;
+                    OnPropertyChanged("SelectedType");
+                }
+            }
+        }
 
         public string MyCompany
         {
@@ -52,48 +76,59 @@ namespace CMOVproj2.ViewModels
                 {
                     selectedCompany = value;
                     MyCompany = selectedCompany.Tick;
-                
-                    
+
+
                 }
             }
         }
 
-
-        
         public DateTime SelectedDate
         {
             get { return selectedDate; }
             set
             {
                 selectedDate = value;
-                OnPropertyChanged("SelectedDate");   
+                OnPropertyChanged("SelectedDate");
             }
         }
+
+
+
+       
+
+
 
         private void ChangeDate(DateTime newDate)
         {
             SelectedDate = newDate;  //Assing your new date to your property
         }
 
+       
 
-
-
-
-        public MainPageViewModel()
+        public MainPageViewModel(INavigation _Navigation)
         {
+            Navigation = _Navigation;
+
             GetDataFromApi = new Command(async () =>
             {
+
+
+
                 string date = String.Format("{0:yyyyMMdd}", selectedDate);
-                
+
                 string url = "https://marketdata.websol.barchart.com/getHistory.json?apikey=" +
                                 API_KEY +
                                 "&symbol=" +
                                 selectedCompany.Tick +
-                                "&type=daily&startDate=" + 
+                                "&type=daily&startDate=" +
                                  date;
-                
+               
+
+
                 JsonValue json = await FetchApiData(url);
             });
+
+
 
             async Task<JsonValue> FetchApiData(string url)
             {
@@ -106,14 +141,26 @@ namespace CMOVproj2.ViewModels
                     using (Stream stream = response.GetResponseStream())
                     {
                         JsonValue jsonDoc = await Task.Run(() => JsonObject.Load(stream));
-                        Console.Out.WriteLine("Response: {0}", jsonDoc.ToString());
+                 
+                        await Navigation.PushAsync(new ChartPage(jsonDoc,selectedType.Type));
+
                         return jsonDoc;
+                        
                     }
                 }
             }
+
+
         }
+
+        
+
+
 
 
 
     }
+
+    
+
 }

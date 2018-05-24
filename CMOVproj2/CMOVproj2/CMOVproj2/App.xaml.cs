@@ -11,7 +11,9 @@ namespace CMOVproj2
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+            
+			var nav = new NavigationPage( new MainPage());
+            MainPage = nav;
 		}
 
  
