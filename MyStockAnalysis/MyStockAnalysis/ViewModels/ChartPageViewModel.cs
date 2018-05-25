@@ -15,50 +15,57 @@ namespace MyStockAnalysis.ViewModels
     {
         private INavigation Navigation;
         private List<Microcharts.Entry> entries = new List<Microcharts.Entry>();
-
-        public Chart DistanceChart => new LineChart()
-       {
-           Entries = entries,
-           LineMode = LineMode.Straight,
-           PointMode = PointMode.Circle,
-           LineSize = 1,
-           PointSize = 10,
-           BackgroundColor = SKColors.Transparent,
-           LineAreaAlpha = 10
+       
+        public Chart Graph1 => new LineChart()
+        {
+            Entries = entries,
+            LineMode = LineMode.Straight,
+            PointMode = PointMode.Circle,
+            LineSize = 1,
+            PointSize = 10,
+            BackgroundColor = SKColors.Transparent,
+            LineAreaAlpha = 10
         };
 
-        
+
         public ChartPageViewModel(JsonValue chartData,string type)
         {
-          
+            
             ApiResult apiResults = JsonConvert.DeserializeObject<ApiResult>(chartData.ToString());
             string selectedType = "null";
             foreach (var item in apiResults.results)
             {
-                if(type == "Open")
-                {
-                    selectedType = item.open;
-                }
-                else if(type == "Close")
-                {
-                    selectedType = item.close;
-                }
-                else if (type == "High")
-                {
-                    selectedType = item.high;
-                }
-                else if (type == "Low")
-                {
-                    selectedType = item.low;
-                }
-                entries.Add(new Microcharts.Entry(float.Parse(selectedType, CultureInfo.InvariantCulture.NumberFormat))
-                {   
-                    
-                    Color = SKColor.Parse("FF1493"),
-                    ValueLabel = selectedType
-                });
-                
+                selectedType = getSelectedType(type, item);
+
+                addToEntry(entries, float.Parse(selectedType, CultureInfo.InvariantCulture.NumberFormat), selectedType, "FF1493");
+
+            }
+        }
+
+        public void addToEntry(List<Microcharts.Entry> entry, float value,string type, string color)
+        {
+            entry.Add(new Microcharts.Entry(value)
+            {
+                Color = SKColor.Parse(color),
+                ValueLabel = type
+            });
+        }
+        public string getSelectedType(String type, ResultLine received)
+        {
+            switch (type)
+            {
+                case "Open":
+                    return received.open;
+                case "Close":
+                    return received.close;
+                case "High":
+                    return received.high;
+                case "Low":
+                    return received.low;
+                default:
+                    return "Null";
             }
         }
     }
+
 }
