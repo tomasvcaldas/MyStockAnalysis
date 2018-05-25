@@ -17,9 +17,25 @@ namespace MyStockAnalysis.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
         private DateTime selectedDate;
         private QuoteType selectedType;
-        public bool canCreate = false;
         private INavigation Navigation;
+
         public ObservableCollection<Company> selectedCompanies { get; set; }
+
+        public DateTime PropertyMaximumDate
+        {
+            get
+            {
+                return DateTime.Now.AddDays(-7);
+            }
+        }
+
+        public DateTime PropertyMinimumDate
+        {
+            get
+            {
+                return DateTime.Now.AddDays(-30);
+            }
+        }
 
         public Command<Company> AddSelectedCompanies
         {
@@ -99,9 +115,15 @@ namespace MyStockAnalysis.ViewModels
             Navigation = _Navigation;
             selectedCompanies = new ObservableCollection<Company>();
 
+
+            
+
             GetCharts = new Command(async () =>
             {
-                await Navigation.PushAsync(new ChartPage(selectedCompanies, selectedDate, selectedType.Type));
+                if (selectedDate != null && SelectedType != null && selectedCompanies.Count >= 1)
+                {
+                    await Navigation.PushAsync(new ChartPage(selectedCompanies, selectedDate, selectedType.Type));
+                }
             });
         }
     }
