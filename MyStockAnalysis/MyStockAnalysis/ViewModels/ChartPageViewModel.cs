@@ -8,47 +8,187 @@ using SkiaSharp;
 using MyStockAnalysis.Models;
 using Newtonsoft.Json;
 using System.Globalization;
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace MyStockAnalysis.ViewModels
 {
     class ChartPageViewModel
     {
         private INavigation Navigation;
-        private List<Microcharts.Entry> entries = new List<Microcharts.Entry>();
-       
-        public Chart Graph1 => new LineChart()
+        private List<Microcharts.Entry> companyEntry = new List<Microcharts.Entry>();
+        private List<Microcharts.Entry> appleEntries = new List<Microcharts.Entry>();
+        private List<Microcharts.Entry> googleEntries = new List<Microcharts.Entry>();
+        private List<Microcharts.Entry> ibmEntries = new List<Microcharts.Entry>();
+        private List<Microcharts.Entry> microsoftEntries = new List<Microcharts.Entry>();
+        private List<Microcharts.Entry> amdEntries = new List<Microcharts.Entry>();
+        private List<Microcharts.Entry> intelEntries = new List<Microcharts.Entry>();
+        private List<Microcharts.Entry> facebookEntries = new List<Microcharts.Entry>();
+        private List<Microcharts.Entry> twitterEntries = new List<Microcharts.Entry>();
+        private List<Microcharts.Entry> oracleEntries = new List<Microcharts.Entry>();
+        private List<Microcharts.Entry> hpEntries = new List<Microcharts.Entry>();
+
+        public Chart Apple => new LineChart()
         {
-            Entries = entries,
+            Entries = appleEntries,
             LineMode = LineMode.Straight,
             PointMode = PointMode.Circle,
             LineSize = 1,
             PointSize = 10,
-            BackgroundColor = SKColors.Transparent,
-            LineAreaAlpha = 10
+            BackgroundColor = SKColors.Transparent
+        };
+        public Chart Google => new LineChart()
+        {
+            Entries = googleEntries,
+            LineMode = LineMode.Straight,
+            PointMode = PointMode.Circle,
+            LineSize = 1,
+            PointSize = 10,
+            BackgroundColor = SKColors.Transparent
+        };
+        public Chart IBM => new LineChart()
+        {
+            Entries = ibmEntries,
+            LineMode = LineMode.Straight,
+            PointMode = PointMode.Circle,
+            LineSize = 1,
+            PointSize = 10,
+            BackgroundColor = SKColors.Transparent
+        };
+        public Chart Microsoft => new LineChart()
+        {
+            Entries = microsoftEntries,
+            LineMode = LineMode.Straight,
+            PointMode = PointMode.Circle,
+            LineSize = 1,
+            PointSize = 10,
+            BackgroundColor = SKColors.Transparent
+        };
+        public Chart AMD => new LineChart()
+        {
+            Entries = amdEntries,
+            LineMode = LineMode.Straight,
+            PointMode = PointMode.Circle,
+            LineSize = 1,
+            PointSize = 10,
+            BackgroundColor = SKColors.Transparent
+        };
+        public Chart Intel => new LineChart()
+        {
+            Entries = intelEntries,
+            LineMode = LineMode.Straight,
+            PointMode = PointMode.Circle,
+            LineSize = 1,
+            PointSize = 10,
+            BackgroundColor = SKColors.Transparent
+        };
+        public Chart Facebook => new LineChart()
+        {
+            Entries = facebookEntries,
+            LineMode = LineMode.Straight,
+            PointMode = PointMode.Circle,
+            LineSize = 1,
+            PointSize = 10,
+            BackgroundColor = SKColors.Transparent
+        };
+        public Chart Twitter => new LineChart()
+        {
+            Entries = twitterEntries,
+            LineMode = LineMode.Straight,
+            PointMode = PointMode.Circle,
+            LineSize = 1,
+            PointSize = 10,
+            BackgroundColor = SKColors.Transparent
+        };
+        public Chart Oracle => new LineChart()
+        {
+            Entries = oracleEntries,
+            LineMode = LineMode.Straight,
+            PointMode = PointMode.Circle,
+            LineSize = 1,
+            PointSize = 10,
+            BackgroundColor = SKColors.Transparent
+        };
+        public Chart HP => new LineChart()
+        {
+            Entries = hpEntries,
+            LineMode = LineMode.Straight,
+            PointMode = PointMode.Circle,
+            LineSize = 1,
+            PointSize = 10,
+            BackgroundColor = SKColors.Transparent
         };
 
-
-        public ChartPageViewModel(JsonValue chartData,string type)
+        public ChartPageViewModel(List<JsonValue> allData,string type, ObservableCollection<Company> companies)
         {
-            
-            ApiResult apiResults = JsonConvert.DeserializeObject<ApiResult>(chartData.ToString());
-            string selectedType = "null";
-            foreach (var item in apiResults.results)
+            Boolean showValues = true;
+            for (int i= 0; i < allData.Count; i++)
             {
-                selectedType = getSelectedType(type, item);
+                if(allData.Count > 1)
+                {
+                    showValues = false;
+                }
+                companyEntry = getSelectedCompanyEntry(companies[i]);
+                ApiResult apiResults = JsonConvert.DeserializeObject<ApiResult>(allData[i].ToString());
+                string selectedType = "null";
+                foreach (var item in apiResults.results)
+                {
+                    selectedType = getSelectedType(type, item);
 
-                addToEntry(entries, float.Parse(selectedType, CultureInfo.InvariantCulture.NumberFormat), selectedType, "FF1493");
+                    addToEntry(companyEntry, float.Parse(selectedType, CultureInfo.InvariantCulture.NumberFormat), selectedType, companies[i].Color, showValues);
 
+                }
             }
         }
 
-        public void addToEntry(List<Microcharts.Entry> entry, float value,string type, string color)
+        public List<Microcharts.Entry> getSelectedCompanyEntry(Company company)
         {
-            entry.Add(new Microcharts.Entry(value)
+            switch (company.Name)
             {
-                Color = SKColor.Parse(color),
-                ValueLabel = type
-            });
+                case "Google":
+                    return googleEntries;
+                case "Apple":
+                    return appleEntries;
+                case "AMD":
+                    return amdEntries;
+                case "Facebook":
+                    return facebookEntries;
+                case "HP":
+                    return hpEntries;
+                case "IBM":
+                    return ibmEntries;
+                case "Intel":
+                    return intelEntries;
+                case "Microsoft":
+                    return microsoftEntries;
+                case "Oracle":
+                    return oracleEntries;
+                case "Twitter":
+                    return twitterEntries;
+                default:
+                    return null;
+            }
+        }
+
+        public void addToEntry(List<Microcharts.Entry> entry, float value,string type, string color, Boolean showValues)
+        {   
+            if(showValues == true)
+            {
+                entry.Add(new Microcharts.Entry(value)
+                {
+                    Color = SKColor.Parse(color),
+                    ValueLabel = type
+                });
+            }
+
+            else
+            {
+                entry.Add(new Microcharts.Entry(value)
+                {
+                    Color = SKColor.Parse(color)
+                });
+            }
+           
         }
         public string getSelectedType(String type, ResultLine received)
         {

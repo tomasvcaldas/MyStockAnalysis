@@ -17,7 +17,10 @@ namespace MyStockAnalysis.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
         private DateTime selectedDate;
         private QuoteType selectedType;
+        public ICommand GetCharts { get; private set; }
         private INavigation Navigation;
+        public IList<Company> Companies { get { return CompanyData.Companies; } }
+        public IList<QuoteType> QuoteTypes { get { return QuoteTypeData.QuoteTypes; } }
 
         public ObservableCollection<Company> selectedCompanies { get; set; }
 
@@ -59,17 +62,10 @@ namespace MyStockAnalysis.ViewModels
             }
         }
 
-        public IList<Company> Companies { get { return CompanyData.Companies; } }
-
-        public IList<QuoteType> QuoteTypes { get { return QuoteTypeData.QuoteTypes; } }
-
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-
-        public ICommand GetCharts { get; private set; }
-
 
         public QuoteType SelectedType
         {
@@ -114,9 +110,6 @@ namespace MyStockAnalysis.ViewModels
         {
             Navigation = _Navigation;
             selectedCompanies = new ObservableCollection<Company>();
-
-
-            
 
             GetCharts = new Command(async () =>
             {

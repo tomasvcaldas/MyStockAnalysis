@@ -8,5 +8,6 @@ namespace MyStockAnalysis.Models
     {
         public string Name { get; set; }
         public string Tick { get; set; }
+        public string Color { get; set; }
     }
 }
