@@ -1,8 +1,7 @@
-﻿using Microcharts;
-using SkiaSharp;
+﻿using MyStockAnalysis.Models;
 using System;
-using System.Collections.Generic;
-using System.Json;
+using System.Collections.ObjectModel;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace MyStockAnalysis
@@ -12,11 +11,11 @@ namespace MyStockAnalysis
     {
 
 
-        public ChartPage(JsonValue jsonDoc, string type)
+        public ChartPage(ObservableCollection<Company> selectedCompanies, DateTime selectedDate, string type)
         {
-
             InitializeComponent();
-            BindingContext = new ViewModels.ChartPageViewModel(jsonDoc, type);
+            selectedCompanies.ToList();
+            //BindingContext = new ViewModels.ChartPageViewModel(jsonDoc, type);
         }
 
     }

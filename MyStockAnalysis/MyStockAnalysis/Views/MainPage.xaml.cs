@@ -12,6 +12,7 @@ using SkiaSharp;
 using Microcharts;
 using Xamarin.Forms.Xaml;
 using MyStockAnalysis.ViewModels;
+using MyStockAnalysis.Models;
 
 namespace MyStockAnalysis
 {
@@ -21,8 +22,17 @@ namespace MyStockAnalysis
         public MainPage()
         {
             InitializeComponent();
-            Console.Out.WriteLine("Main page");
             BindingContext = new MainPageViewModel(Navigation);
+        }
+
+        private void RemoveCompanyFromList(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+
+            var company = button.BindingContext as Company;
+
+            var vm = BindingContext as MainPageViewModel;
+            vm.RemoveSelectedCompanies.Execute(company);
         }
     }
 }

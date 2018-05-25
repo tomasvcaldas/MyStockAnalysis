@@ -1,39 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Stock Analysis"
            
              xmlns:local="clr-namespace:MyStockAnalysis"
              xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              x:Class="MyStockAnalysis.MainPage">
 
-    <StackLayout>
-        <Picker Title="Select Company" ItemsSource="{Binding Companies}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedCompany}" />
-        <Picker Title="Select Quote Type" ItemsSource="{Binding QuoteTypes}" ItemDisplayBinding="{Binding Type}" SelectedItem="{Binding SelectedType}"/>
+    <ScrollView>
+        <StackLayout>
+            <Picker Title="Select Company" ItemsSource="{Binding Companies}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding AddCompanyToSelectedCompanies}" />
+            <Picker Title="Select Quote Type" ItemsSource="{Binding QuoteTypes}" ItemDisplayBinding="{Binding Type}" SelectedItem="{Binding SelectedType}"/>
 
-        <DatePicker MinimumDate="01/01/2016"
+            <DatePicker MinimumDate="01/01/2016"
                     MaximumDate="05/24/2018"
                     Date="{Binding SelectedDate}"/>
 
-        <Label Text="Selected Company Tick:"/>
-        <Label x:Name="selectedTick" Text="{Binding MyCompany}"/>
+            <Label Text="Selected Companies Ticks:"/>
+            
+            <ListView x:Name="listView" Margin="20" ItemsSource="{Binding selectedCompanies}" HeightRequest="100">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                <Button Text="X" TextColor="White" BackgroundColor="Red" HorizontalOptions="End" WidthRequest="50" Clicked="RemoveCompanyFromList" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
-        <ListView x:Name="listView" Margin="20" ItemsSource="{Binding Todos}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                            <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                            <Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding Done}" />
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
-        <Button Text="Get data" 
+            <Button Text="Get data" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand"
-           Command="{Binding GetDataFromApi}" />
-    </StackLayout>
+           Command="{Binding GetCharts}" />
+        </StackLayout>
 
+    </ScrollView>
 </ContentPage>
